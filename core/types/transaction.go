@@ -1,37 +1,40 @@
 package types
 
 import (
-  "math/big"
+	"fmt"
+	"math/big"
 )
 
 type TransactionType uint64
 
 //add the transaction Type
 const (
-  SERARCH         TransactionType = iota
-  CLAIMINFO
-  QOSSERVICE
-  CASH
+	SERARCH TransactionType = iota
+	CLAIMINFO
+	QOSSERVICE
+	CASH
 )
 
 //Define the Transaction struct
 type Transaction struct {
-  data    txdata
+	data txdata
 }
 
 //Transaction Data
 type txdata struct {
-  //Transaction Type
-  TxType      TransactionType
-  Announce    uint64
-  From        string
-  To          string
-  Amount      *big.Int
-  info        interface{}
+	//Transaction Type
+	TxType   TransactionType
+	Announce uint64
+	From     string
+	To       string
+	Amount   *big.Int
+	info     interface{}
 
-  V           *big.Int
-  R           *big.Int
-  S           *big.Int
+	V *big.Int
+	R *big.Int
+	S *big.Int
 }
 
-func NewTransaction(nonce)
+func NewTransaction(nonce uint64) {
+	fmt.Println("new transaction")
+}
