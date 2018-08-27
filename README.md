@@ -7,3 +7,4 @@
 5. 添加监控相关的文件metrics
 6. 添加测试文件夹（包含所有的测试文件）
 7. 添加公共函数文件夹common和共识文件夹consensus
+8. 增加测试文件types_test.go

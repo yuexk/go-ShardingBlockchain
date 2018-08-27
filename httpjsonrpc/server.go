@@ -15,7 +15,7 @@ type ServerMux struct {
 var mainMux ServerMux
 
 func InitServeMux() {
-	mainMux = make(map[string]func(*http.Request, map[string]interface{}) map[string]interface{})
+	mainMux.m = make(map[string]func(*http.Request, map[string]interface{}) map[string]interface{})
 }
 
 func HandleFunc(pattern string, handler func(*http.Request, map[string]interface{}) map[string]interface{}) {
