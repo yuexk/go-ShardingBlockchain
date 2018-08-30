@@ -39,3 +39,21 @@ func Call(address string, method string, id interface{}, params []interface{}) (
 	}
 	return result, nil
 }
+
+func StartClient() {
+	var res map[string]interface{}
+	var err error
+
+	res, err = Call("http://127.0.0.1:20332", "getinfo", 1, []interface{}{})
+	if err != nil {
+		log.Fatal("Err: %v", err)
+	}
+	log.Println(res)
+
+	params := []interface{}{"asset_id", "address", 56}
+	res, err = Call("http://127.0.0.1:20332", "sendtoaddress", 2, params)
+	if err != nil {
+		log.Fatalf("Err:%v", err)
+	}
+	log.Println(res)
+}

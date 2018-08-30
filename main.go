@@ -28,6 +28,10 @@ func init() {
 	go start_server()
 }
 
+func sendToAddress(req *http.Request, cmd map[string]interface{}) map[string]interface{} {
+	return cmd
+}
+
 func start_server() {
 	print("hello start server\n")
 	httpjsonrpc.InitServeMux()

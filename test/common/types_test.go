@@ -1,16 +1,15 @@
 package common
 
 import (
-	"fmt"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/go-ShardingBlockchain/common"
 )
 
 func TestCopyBytes(t *testing.T) {
 	b := common.CopyBytes([]byte("Hello world"))
 	if string(b) != "Hello world" {
-		fmt.Println("Test error!!!")
+		t.Error("Faild")
 	}
-	fmt.Println("Test Rigth!!!!")
+	t.Log("Pass")
 }

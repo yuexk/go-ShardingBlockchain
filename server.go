@@ -59,7 +59,7 @@ func startServer() {
 
 func main() {
 	go startServer()
-	conn, err := net.Dial("tcp", "localhost:10333")
+	conn, err := net.Dial("tcp", "localhost:20333")
 	if err != nil {
 		panic(err)
 	}
@@ -74,7 +74,7 @@ func main() {
 		err := c.Call("Arith.Multiply", args, &reply)
 		fmt.Fprint(conn, `{"jsonrpc": "2.0", "method": "getbestblockhash", "params": [], "id": 2`)
 		var resp GetBestBlockHashResp
-		err := dec.Decode(&resp)
+		err = dec.Decode(&resp)
 		if err != nil {
 			log.Fatal("Decode:%s:", err)
 		}
