@@ -18,3 +18,13 @@ func CopyBytes(b []byte) (copiedBytes []byte) {
 	copy(copiedBytes, b)
 	return
 }
+
+//定义任务里列表
+type TaskList struct {
+	//任务名
+	//任务共识组
+}
+
+//任务存取、任务读出
+
+//LRU算法实现

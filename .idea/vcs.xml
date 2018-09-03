@@ -2,5 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fixbuf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kyber" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/onet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/protobuf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/testify" vcs="Git" />
   </component>
 </project>

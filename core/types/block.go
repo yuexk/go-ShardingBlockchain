@@ -48,7 +48,7 @@ type SubBlock struct {
 
 //定义主链区块
 type Head struct {
-	PreHash       common.Hash
+	PrevHash      common.Hash
 	LeaderAddress common.Address
 	TaskList      map[TaskNumber]common.Hash
 	BlockRoot     common.Hash
